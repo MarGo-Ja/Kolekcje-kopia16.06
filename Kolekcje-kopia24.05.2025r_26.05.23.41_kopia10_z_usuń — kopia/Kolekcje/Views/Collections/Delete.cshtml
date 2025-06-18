@@ -1,0 +1,18 @@
+﻿@model Collection
+@{
+    ViewData["Title"] = "Usuń kolekcję";
+}
+
+<h2>Usuń kolekcję</h2>
+
+<h4>Czy na pewno chcesz usunąć tę kolekcję?</h4>
+<div>
+    <strong>@Model.Title</strong><br />
+    Kategoria: @Model.Category?.Name
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Usuń</button>
+    <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+</form>

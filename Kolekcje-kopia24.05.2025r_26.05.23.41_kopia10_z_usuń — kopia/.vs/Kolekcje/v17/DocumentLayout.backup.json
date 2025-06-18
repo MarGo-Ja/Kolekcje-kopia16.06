@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\migrations\\20250616191631_kolekcje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\migrations\\20250616191631_kolekcje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\views\\collections\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\views\\collections\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\views\\collections\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\views\\collections\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\controllers\\collectionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\controllers\\collectionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|c:\\users\\majan\\desktop\\documents\\kolekcje-kopia16.06\\kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\kolekcje\\migrations\\20250614075842_kolekcje1406.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037B1997-44AF-4FD8-9068-7F8F26C710E0}|Kolekcje\\Kolekcje.csproj|solutionrelative:kolekcje\\migrations\\20250614075842_kolekcje1406.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250616191631_Kolekcje.cs",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Migrations\\20250616191631_Kolekcje.cs",
+              "RelativeDocumentMoniker": "Kolekcje\\Migrations\\20250616191631_Kolekcje.cs",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Migrations\\20250616191631_Kolekcje.cs",
+              "RelativeToolTip": "Kolekcje\\Migrations\\20250616191631_Kolekcje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T19:16:32.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250614075842_Kolekcje1406.cs",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Migrations\\20250614075842_Kolekcje1406.cs",
+              "RelativeDocumentMoniker": "Kolekcje\\Migrations\\20250614075842_Kolekcje1406.cs",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Migrations\\20250614075842_Kolekcje1406.cs",
+              "RelativeToolTip": "Kolekcje\\Migrations\\20250614075842_Kolekcje1406.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T07:58:43.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Kolekcje\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Kolekcje\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAHAAAAAAn5mZmZkqwKUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T20:35:16.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CollectionsController.cs",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\CollectionsController.cs",
+              "RelativeDocumentMoniker": "Kolekcje\\Controllers\\CollectionsController.cs",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\CollectionsController.cs",
+              "RelativeToolTip": "Kolekcje\\Controllers\\CollectionsController.cs",
+              "ViewState": "AgIAAIYBAAAA2DEzMzMZwKEBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T19:49:56.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Kolekcje\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Kolekcje\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFwAAAAAUJmZmZnxv+8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T19:11:37.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Collections\\Create.cshtml",
+              "RelativeDocumentMoniker": "Kolekcje\\Views\\Collections\\Create.cshtml",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Collections\\Create.cshtml",
+              "RelativeToolTip": "Kolekcje\\Views\\Collections\\Create.cshtml",
+              "ViewState": "AgIAAFkAAAAAoJmZmZkkwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T18:22:53.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "bootstrap.js",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "RelativeDocumentMoniker": "Kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "RelativeToolTip": "Kolekcje\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-03T20:57:31.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Kolekcje\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Kolekcje\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-31T15:28:44.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Kolekcje\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Kolekcje\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAA8AAADAMzMzMzMgwIYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-31T14:12:19.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Kolekcje\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Kolekcje\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB8AAACA9f////8VwCcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T13:37:19.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Collections\\Index.cshtml",
+              "RelativeDocumentMoniker": "Kolekcje\\Views\\Collections\\Index.cshtml",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Views\\Collections\\Index.cshtml",
+              "RelativeToolTip": "Kolekcje\\Views\\Collections\\Index.cshtml",
+              "ViewState": "AgIAACkBAACYKAAAAAAywBcBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T13:25:24.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Kolekcje\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\majan\\Desktop\\Documents\\Kolekcje-kopia16.06\\Kolekcje-kopia24.05.2025r_26.05.23.41_kopia10_z_usu\u0144 \u2014 kopia\\Kolekcje\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Kolekcje\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAywBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T19:08:59.533Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

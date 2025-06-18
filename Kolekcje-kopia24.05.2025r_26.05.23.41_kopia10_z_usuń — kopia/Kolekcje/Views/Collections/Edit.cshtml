@@ -1,0 +1,60 @@
+﻿@model Collection
+@{
+    ViewData["Title"] = "Edytuj kolekcję";
+}
+
+<h2>Edytuj kolekcję</h2>
+
+<!-- FORMULARZ: pamiętaj o enctype -->
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+<!-- <form asp-action="Edit" method="post"> -->
+    <input type="hidden" asp-for="Id" />
+
+    <!-- ⛔️ To zapobiega utracie ImagePath przy błędach -->
+    <input type="hidden" asp-for="ImagePath" />
+
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CollectionCategoryId" class="control-label">Kategoria</label>
+        <select asp-for="CollectionCategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option value="">-- wybierz kategorię --</option>
+        </select>
+    </div>
+
+    <!-- 🖼️ Wyświetlenie aktualnego obrazu, jeśli istnieje -->
+    @if (!string.IsNullOrEmpty(Model.ImagePath))
+    {
+        <div class="form-group">
+            <label>Aktualny obraz:</label><br />
+            <a href="@Model.ImagePath" target="_blank">
+                <img src="@Model.ImagePath" alt="Obraz" style="max-width: 100px; max-height: 100px;" />
+            </a>
+        </div>
+    }
+
+    <!-- 📤 Wybór nowego pliku obrazu -->
+    <div class="form-group">
+        <label for="ImageFile">Dodaj lub zmień obraz (opcjonalnie)</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+    <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,113 @@
+﻿@model Collection
+@{
+    ViewData["Title"] = "Dodaj kolekcję";
+}
+
+<h2>Dodaj element kolekcji</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    @*
+    <div class="form-group">
+        <label asp-for="CollectionCategoryId" class="control-label">Kategoria</label>
+        <select id="categoryDropdown" asp-for="CollectionCategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option value="">-- wybierz kategorię --</option>
+            <option value="__new">Inna...</option>
+        </select>
+    </div>
+
+    <!-- NOWE POLE: Kategoria -->
+    <div class="form-group mt-2">
+        <button type="button" class="btn btn-danger" onclick="usunKategorie()">Usuń kategorię</button>
+    </div>
+    *@
+
+    <div class="form-group d-flex align-items-center">
+        <div style="flex-grow: 1;">
+            <label asp-for="CollectionCategoryId" class="control-label">Kategoria</label>
+            <select id="categoryDropdown" asp-for="CollectionCategoryId" class="form-control" asp-items="ViewBag.Categories">
+                <option value="">-- wybierz kategorię --</option>
+                <option value="__new">Inna...</option>
+            </select>
+        </div>
+
+        <div class="ml-2">
+            <button type="button" class="btn btn-danger mt-4" onclick="usunKategorie()">Usuń kategorię</button>
+        </div>
+    </div>
+
+
+    <div class="form-group" id="newCategoryDiv" style="display:none;">
+        <label for="NewCategoryName">Nowa kategoria</label>
+        <input type="text" class="form-control" id="NewCategoryName" name="NewCategoryName" />
+    </div>
+
+    <!-- Pole opisu -->
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <!-- NOWE POLE: Obraz -->
+    <div class="form-group">
+        <label for="ImageFile">Obraz</label>
+        <input type="file" class="form-control" name="ImageFile" accept="image/*" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+
+@*
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById("categoryDropdown").addEventListener("change", function () {
+            var newCategoryDiv = document.getElementById("newCategoryDiv");
+            newCategoryDiv.style.display = this.value === "__new" ? "block" : "none";
+        });
+    </script>
+}
+*@
+
+@* Usuwanie kategorii - AJAX*@
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.getElementById("categoryDropdown").addEventListener("change", function () {
+            var newCategoryDiv = document.getElementById("newCategoryDiv");
+            newCategoryDiv.style.display = this.value === "__new" ? "block" : "none";
+        });
+
+        function usunKategorie() {
+            var selectedId = document.getElementById("categoryDropdown").value;
+
+            if (!selectedId || selectedId === "__new") {
+                alert("Wybierz kategorię do usunięcia.");
+                return;
+            }
+
+            if (confirm("Czy na pewno chcesz usunąć tę kategorię?")) {
+                fetch(`/Categories/DeleteAjax/${selectedId}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Kategoria została usunięta.");
+                        location.reload(); // Odświeża listę
+                    } else {
+                        response.text().then(text => {
+                            alert("Błąd: " + text);
+                        });
+                    }
+                });
+            }
+        }
+    </script>
+}

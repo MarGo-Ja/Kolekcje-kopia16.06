@@ -1,0 +1,262 @@
+﻿@*
+    @{
+    ViewData["Title"] = "Home Page";
+}
+*@
+@*
+<div class="text-center">
+    <h1 class="display-4">Witamy w aplikacji Kolekcje!</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Witamy w aplikacji Kolekcje!</h1>
+    <h2>Zarządzaj swoimi zbiorami z łatwością</h2>
+    <p>Ta aplikacja pozwala dodawać, edytować i usuwać elementy w Twoich kolekcjach, takich jak książki, znaczki, filmy czy płyty CD.</p>
+
+    <p>Dzięki prostemu interfejsowi możesz szybko zarządzać swoimi zbiorami i przeszukiwać je według tytułu lub kategorii.</p>
+
+    <p>Stworzone z użyciem <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core</a>.</p>
+</div>
+*@@*
+<div class="text-center">
+    <h1 class="h3">Witamy w aplikacji Kolekcje!</h1> <!-- Zmniejszono z display-4 -->
+    <h2>Zarządzaj swoimi zbiorami z łatwością</h2>
+    <p class="fs-5">Ta aplikacja pozwala dodawać, edytować i usuwać elementy w Twoich kolekcjach.</p>
+    <p class="fs-5">Możesz przeszukiwać kolekcje według tytułu lub kategorii.</p>
+
+    <p>Stworzone z użyciem <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core</a>.</p>
+</div>
+*@
+@*
+@{
+    ViewData["Title"] = "Strona główna";
+}
+
+<div class="text-center">
+    <h1 style="font-size: 32px; font-weight: 600; margin-bottom: 20px;">
+        Witamy w aplikacji Kolekcje!
+    </h1>
+
+    <h2 style="font-size: 24px; font-weight: 500; margin-bottom: 16px;">
+        Zarządzaj swoimi zbiorami z łatwością
+    </h2>
+
+    <p style="font-size: 18px; max-width: 800px; margin: 0 auto 10px;">
+        Dodawaj, edytuj i usuwaj elementy swojej kolekcji, takie jak książki, znaczki czy filmy.
+    </p>
+
+    <p style="font-size: 18px; max-width: 800px; margin: 0 auto;">
+        Przeszukuj swoje zbiory według tytułu lub kategorii, a wszystko to w wygodnym i przejrzystym interfejsie.
+    </p>
+</div>
+*@
+
+@{
+    ViewData["Title"] = "Strona główna";
+}
+
+<div class="kremowe-tlo p-4">  @*div z zawartością strony w CSS*@
+
+<!-- Ładowanie ikon z Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+@*
+<style>
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        to
+
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #0d6efd;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+</style>
+
+*@
+
+<div class="text-center mt-3 fade-in">
+    <!-- Logo aplikacji -->
+    <img src="~/images/logo-kolekcje.png" alt="Logo Kolekcje" class="logo-img" />
+
+    <h1 style="font-size: 32px; font-weight: 600; margin-bottom: 20px;">
+        Witamy w aplikacji Kolekcje!
+    </h1>
+
+    <h2 style="font-size: 24px; font-weight: 500; margin-bottom: 24px;">
+        Zarządzaj swoimi zbiorami z łatwością
+    </h2>
+
+    <p style="font-size: 18px; max-width: 800px; margin: 0 auto 20px;">
+        Dodawaj, edytuj i przeszukuj elementy kolekcji – od książek, przez znaczki, aż po filmy. <br />
+        Prosto, szybko i intuicyjnie.
+    </p>
+
+    <!-- Sekcja z ikonami funkcji -->
+
+   @*
+    <div class="row justify-content-center mt-4 fade-in">
+        <div class="col-md-3">
+            <div class="feature-icon">
+                <i class="bi bi-book"></i>
+            </div>
+            <p><strong>Dodawaj nowe elementy</strong></p>
+        </div>
+        <div class="col-md-3">
+            <div class="feature-icon">
+                <i class="bi bi-pencil-square"></i>
+            </div>
+            <p><strong>Edytuj swoje wpisy</strong></p>
+        </div>
+        <div class="col-md-3">
+            <div class="feature-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <p><strong>Wyszukuj kolekcje</strong></p>
+        </div>
+    </div>
+    *@
+</div>
+
+@*
+    <div class="row text-center mt-5">
+        <div class="col">
+            <a asp-controller="Collections" asp-action="Create" class="text-decoration-none text-dark">
+               <img src="~/images/book-icon.png" width="48" alt="Dodaj" />
+                <h5 class="mt-2">Dodawaj nowe elementy</h5>
+            </a>
+        </div>
+        <div class="col">
+            <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark">
+                <img src="~/images/edit-icon.png" width="48" alt="Edytuj" />
+                <h5 class="mt-2">Edytuj swoje wpisy</h5>
+            </a>
+        </div>
+        <div class="col">
+            <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark">
+                <img src="~/images/search-icon.png" width="48" alt="Szukaj" />
+                <h5 class="mt-2">Wyszukuj kolekcje</h5>
+            </a>
+        </div>
+    </div>
+
+   *@
+
+    <div class="row justify-content-center mt-4 fade-in">
+        <div class="col-md-3 text-center">
+            <a asp-controller="Collections" asp-action="Create" class="text-decoration-none text-dark">
+                <div class="feature-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+                <p><strong>Dodawaj nowe elementy</strong></p>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark">
+                <div class="feature-icon">
+                    <i class="bi bi-pencil-square"></i>
+                </div>
+                <p><strong>Edytuj swoje wpisy</strong></p>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark">
+                <div class="feature-icon">
+                    <i class="bi bi-search"></i>
+                </div>
+                <p><strong>Wyszukuj kolekcje</strong></p>
+            </a>
+        </div>
+    </div>
+
+  @*  
+<div class="text-center mt-3">
+    <span class="badge bg-info text-dark fs-5">
+        Liczba pozycji: @ViewBag.LiczbaPozycji
+    </span>
+</div>
+*@
+
+@*
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="alert alert-info fs-5">
+            Liczba pozycji w kolekcjach: <strong>@ViewBag.LiczbaPozycji</strong>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark">
+            <div class="card-header">Ostatnio dodane kolekcje</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var item in ViewBag.OstatnieKolekcje as List<Kolekcje.Models.Collection>)
+                {
+                    <li class="list-group-item">
+                        <strong>@item.Title</strong> — @item.Category
+                            <strong>@item.Category</strong> @item.Category?.Name
+                        @if (!string.IsNullOrEmpty(item.ImagePath))
+                        {
+                            <img src="@item.ImagePath" alt="miniatura" style="max-width: 50px;" />
+                        }
+                    </li>
+                }
+            </ul>
+            </a>
+        </div>
+    </div>
+</div>
+
+*@
+
+<div class="row mt-4">
+    <div class="col-md-6 text-center">
+        <div class="alert alert-info fs-4"> <!-- fs decyduje o wielkości liter w napisie "Liczba pozycji 1 - największe im wyższy nr tym mniejszy tekst -->
+            Liczba pozycji w kolekcjach: <strong>@ViewBag.LiczbaPozycji</strong>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card fs-5"> <!-- TU dodano fs-5, które decyduje o wielkości liter w tabeli. -->
+            <!-- <a asp-controller="Collections" asp-action="Index" class="text-decoration-none text-dark"> Tak było przed kotwicą - anchorem -->
+            <a asp-controller="Collections" asp-action="Index" asp-fragment="koniec-tabeli" class="text-decoration-none text-dark"> <!--Tak jest obecnie z anchorem-->
+                <div class="card-header">Ostatnio dodane elementy</div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var item in ViewBag.OstatnieKolekcje as List<Kolekcje.Models.Collection>)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>@item.Title</strong>
+                                   w kategorii 
+                                @item.Category?.Name
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.ImagePath))
+                            {
+                                <img src="@item.ImagePath" alt="miniatura" style="max-width: 200px;" />
+                            }
+                        </li>
+                    }
+                </ul>
+            </a>
+        </div>
+    </div>
+</div>
+
+</div> @*div z zawartością strony w CSS*@

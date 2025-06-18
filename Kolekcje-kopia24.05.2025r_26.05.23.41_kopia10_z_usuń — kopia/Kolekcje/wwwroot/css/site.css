@@ -1,0 +1,142 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*<style >*/
+/*Strona g³ówna - animacja. Te style zosta³y dodane 27.05.2025r. o godz. 22.56*/
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.fancy-button {
+    background: linear-gradient(135deg, #6fb1fc, #4364f7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+    .fancy-button:hover {
+        background: linear-gradient(135deg, #4364f7, #6fb1fc);
+        transform: translateY(-2px);
+    }
+
+.kremowe-tlo {
+    background-color: #fff8dc; /* lub np. #fef6e4 albo #fcf5e5 */
+}
+
+/* Alternatywne ocienie kremowego:
+    #fdf5e6 - bardzo jasny kremowy
+    #f8f0e3 - jasny kremowy
+    #f5e9d7 - lekko ciemniejszy kremowy
+    #f2e2cb - ciemniejszy kremowy
+    #efe0be - jeszcze ciemniejszy kremowy
+
+    #fff8dc – Cornsilk
+    #fcf5e5 – Delikatny krem
+    #fef6e4 – Jasny be¿
+    #fdf6e3 – Piaskowy pastel
+*/
+
+/*Paski tabeli "Moje kolekcje" */
+
+/* .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f8f9fa; 
+} */
+
+/* .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #e9ecef; 
+} */
+
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    --bs-table-accent-bg: #fffbea; /* jasno-kremowy kolor */
+    color: inherit;
+}
+
+
+/*.table-striped > tbody > tr:nth-of-type(even) {
+    --bs-table-accent-bg: #fdf6e3;  ciemniejszy kremowy kolor
+    color: inherit;
+}*/
+    
+/*</style >*/
+
+/*Drukowanie*/
+
+@media print {
+    /* Ukryj wszystko domyœlnie */
+    body *
+
+{
+    visibility: hidden;
+}
+
+/* Poka¿ tylko tabelê z klas¹ only-print */
+.only-print, .only-print * {
+    visibility: visible;
+}
+
+/* Ustaw tabelê na górze strony */
+.only-print {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+    /* Ukryj kolumny checkboxów i akcji */
+    .only-print th.zaznacz,
+    .only-print td.zaznacz,
+    .only-print th.actions,
+    .only-print td.actions {
+        display: none !important;
+    }
+
+}
+
+

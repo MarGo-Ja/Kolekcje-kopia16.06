@@ -1,0 +1,403 @@
+﻿
+@model IEnumerable<Collection>
+
+@*Kolory pasków tabeli w html*@
+@*
+<style>
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        --bs-table-accent-bg: #fffbea; /* jasno-kremowy */
+        color: inherit;
+    }
+</style>
+*@
+@*Kolory pasków tabeli zostały przeniesione do wwwroot-site-site.css*@
+
+@{
+    ViewData["Title"] = "Moje kolekcje";
+}
+
+<a id="top"></a> <!-- Kotwica czyli Anchor -->
+
+
+<h2 class="d-flex align-items-center">
+    Moje kolekcje
+    <span class="badge bg-primary ms-3">Liczba pozycji: @ViewBag.TotalCount</span>
+</h2>
+
+
+
+<form asp-controller="Collections" asp-action="Index" method="get" class="mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-md-6">
+            <input type="text" name="searchString" class="form-control" placeholder="Wyszukaj po tytule..." />
+        </div>
+        <div class="col-md-3">
+            <select name="categoryFilter" class="form-select">
+                <option value="">Wszystkie kategorie</option>
+                @foreach (var cat in ViewBag.Categories as List<string>)
+                {
+                    <option value="@cat">@cat</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3 d-flex gap-2"> <!-- ✅ Układ przycisków -->
+            <button type="submit" class="btn btn-outline-primary w-100">Szukaj</button>
+            @*
+            <button type="submit" formaction="/Collections/PokazZaznaczone" formmethod="post" class="btn btn-outline-secondary w-100">
+                Pokaż zaznaczone
+                
+            </button>*@            
+        </div>
+        @*
+        <div class="mt-2">
+            <button type="submit" class="btn btn-outline-info">✅ Pokaż zaznaczone</button>
+        </div>
+        *@
+        @* <div class="col-md-3 d-flex gap-2"> *@
+        @*
+        <div class="col-md-3 d-flex gap-2">
+            <!-- ✅ Układ przycisków -->
+            <button type="submit" formaction="/Collections/PokazZaznaczone" formmethod="post" class="btn btn-outline-secondary w-100">
+                Pokaż zaznaczone
+            </button>
+            <button type="submit" formaction="/Collections/ExportToExcel" formmethod="post" class="btn btn-outline-success w-100">
+                Eksportuj do Excel
+            </button>
+        </div>
+        *@
+
+    </div>
+
+</form>
+@*
+<div class="mt-2">
+    <button type="submit" class="btn btn-outline-info">✅ Pokaż zaznaczone</button>
+</div>
+*@
+
+
+<form method="post" asp-action="PokazZaznaczone" asp-controller="Collections">
+
+<!-- <table class="table table-bordered"> -->
+    @*
+      <!--  <div class="mt-2"> -->
+        <div class="mt-2 d-flex justify-content-end gap-2"> <!-- ✅ Układ przycisków -->
+
+            <button type="submit" formaction="/Collections/ExportToExcel" formmethod="post" class="btn btn-outline-success w-100">
+                Eksportuj do Excel
+            </button>
+
+            <button type="submit" class="btn btn-outline-info">✅ Pokaż zaznaczone</button>
+        </div>
+    *@
+
+    <!-- <button type="submit" class="btn btn-outline-info">✅ Pokaż zaznaczone</button> -->
+
+    <div class="d-flex justify-content-between align-items-center mt-3 gap-2"> <!--Wszystkie 3 przyciski na jednakowym poziomie-->
+
+        <a asp-controller="Collections" asp-action="Create" class="btn btn fancy-button">
+            ➕ Dodaj kolekcję
+        </a>
+
+        <button onclick="window.print()" class="btn btn-success">
+            🖨️ Drukuj
+        </button>
+
+        <button type="submit" class="btn btn-outline-info">✅ Pokaż wg zaznaczenia</button>
+
+        <a href="#koniec-tabeli" class="btn btn fancy-button">
+            ⬇️ Na dół
+        </a>
+                
+    </div>
+    @*
+    <div id="tabela-do-druku">
+        <table class="table table-striped">
+            <!--<table class="table table-striped">-->
+    *@
+    @*
+    <table class="table table-striped table-bordered"> <!--Dwa kolory wierszy-->
+    
+    <thead>
+    <tr>
+        <th class="align-middle text-center">Lp.</th>
+        <th class="align-middle text-center">Tytuł</th>
+        <th class="align-middle text-center">Kategoria</th>
+        <th class="align-middle text-center">Obraz</th>
+        <th class="align-middle text-center">Opis</th>
+        <th class="align-middle text-center">Zaznacz</th> <!-- ✅ Nowa kolumna -->
+        <th class="align-middle text-center">Akcje</th>
+    </tr>
+    </thead>
+    *@
+    @*
+    <div id="tabela-do-druku">
+        <table class="table table-striped">
+            <!--<table class="table table-striped">-->
+*@
+@*07.06.2025r.*@@*
+    
+        <tbody>
+
+        <thead>
+
+            <tr>
+                <th class="align-middle text-center">Lp.</th> <!-- 👈 Lp. -->
+                <th class="align-middle text-center">Tytuł</th>
+                <th class="align-middle text-center">Kategoria</th>
+                <th class="align-middle text-center">Obraz</th>
+                <th class="align-middle text-center">Opis</th>
+                <th class="align-middle text-center">Zaznacz</th> <!-- Ukrywana przy wydruku -->
+                <th class="align-middle text-center">Akcje</th>   <!-- Ukrywana przy wydruku -->
+            </tr>
+
+        </thead>
+
+    <!--Dodałem 19.05.2025r.-->
+    @{
+        int lp = 1;
+    }
+    
+    
+    <tbody>
+    
+@foreach (var item in Model)
+{
+    <tr>
+                <td class="align-middle text-center">@lp</td> <!-- 👈 Lp. -->
+                <td class="align-middle">@item.Title</td>
+                <td class="align-middle text-center">@item.Category?.Name</td>
+
+                <!--Obraz 26.05.2025r.-->
+
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <a href="@item.ImagePath" target="_blank">
+                            <img src="@item.ImagePath" style="width:100px; height:100px; object-fit:cover;" />
+                        </a>
+                    }
+                    else
+                    {
+                        <span>Brak obrazu</span>
+                    }                
+                </td>
+
+                <td class="text-wrap" style="word-break: break-word; white-space: normal;">
+                    @item.Description</td>
+                
+                 <!-- 👈 wyśrodkowany pionowo -->
+
+                <td class="text-center align-middle">
+                    <input type="checkbox" name="selectedIds" value="@item.Id" />
+                </td>
+                                    
+
+                <td class="d-flex justify-content-center gap-1">
+                    <!-- Przyciski obok siebie z przerwą 1mm-->
+
+
+           <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edytuj</a>
+                             
+             
+            <!-- Przycisk pokazujący modal -->
+         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">Usuń</button>
+              
+                           
+            <!-- Modal Bootstrap -->
+            <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="modalLabel-@item.Id" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="modalLabel-@item.Id">Potwierdzenie usunięcia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+                        </div>
+                        <div class="modal-body">
+                            Czy na pewno chcesz usunąć kolekcję <strong>@item.Title</strong>?
+                        </div>
+                        <div class="modal-footer">
+                            <form asp-action="DeleteConfirmed" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger">Tak, usuń</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </td>
+        
+    </tr>
+
+            lp++;
+}
+    
+
+</tbody>
+
+</table>
+*@
+
+
+  <table class="table table-striped table-bordered only-print">
+       @*
+        <thead>
+            <tr>                
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th class="zaznacz">Zaznacz</th>
+                <th class="actions">Akcje</th>
+            </tr>
+        </thead>
+        
+        
+        <tbody>
+        
+        *@
+                <thead>
+                    <tr>
+                        <th class="align-middle text-center">Lp.</th>
+                        <th class="align-middle text-center">Tytuł</th>
+                        <th class="align-middle text-center">Kategoria</th>
+                        <th class="align-middle text-center">Obraz</th>
+                        <th class="align-middle text-center">Opis</th>
+                        <th class="align-middle text-center zaznacz">Zaznacz</th> <!-- Ukrywana przy wydruku -->
+                        <th class="align-middle text-center actions">Akcje</th>   <!-- Ukrywana przy wydruku -->
+                    </tr>
+                </thead>
+                
+                
+                <tbody>                  
+
+                    @{
+                        int lp = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="align-middle text-center">@lp</td>
+                            <td class="align-middle text-center">@item.Title</td>
+                            @*<td class="class=" align-middle text-center"text-center">@item.Category?.Name</td>*@
+                            <td class="align-middle text-center">@item.Category?.Name</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImagePath))
+                                {
+                                    <a href="@item.ImagePath" target="_blank">
+                                        <img src="@item.ImagePath" style="width:100px; height:100px; object-fit:cover;" />
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span>Brak obrazu</span>
+                                }
+                            </td>
+                            <td class="align-middle text-center text-wrap">@item.Description</td>
+
+                            <td class="align-middle text-center zaznacz">
+                                <input type="checkbox" name="selectedIds" value="@item.Id" />
+                            </td>
+                            @*
+                            <td class="d-flex justify-content-center gap-1 actions">
+
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edytuj</a>
+                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">Usuń</button>
+                                <!-- modal kod bez zmian -->
+                                *@
+                        
+                        <td class="d-flex justify-content-center gap-1 actions" >
+                        <!-- Przyciski obok siebie z przerwą 1mm-->
+                        
+                        
+
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edytuj</a>
+
+                        
+                        <!-- Przycisk pokazujący modal -->
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">Usuń</button>
+                        
+
+                        <!-- Modal Bootstrap -->
+                        <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="modalLabel-@item.Id" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-danger text-white">
+                                        <h5 class="modal-title" id="modalLabel-@item.Id">Potwierdzenie usunięcia</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Czy na pewno chcesz usunąć kolekcję <strong>@item.Title</strong>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form asp-action="DeleteConfirmed" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button type="submit" class="btn btn-danger">Tak, usuń</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </td>
+                    
+
+                        </tr>
+
+                        lp++;
+
+                    }
+                    
+  </tbody>
+  </table>
+
+           
+   @* 
+        </table>
+    </div>
+     *@  
+         
+
+    <div class="d-flex justify-content-between align-items-center mt-3 gap-2">
+        <!--Wszystkie 3 przyciski na jednakowym poziomie-->
+
+        <a asp-controller="Collections" asp-action="Create" class="btn btn fancy-button">
+            ➕ Dodaj kolekcję
+        </a>
+
+        <button onclick="window.print()" class="btn btn-success">
+            🖨️ Drukuj
+        </button>
+
+        <button type="submit" class="btn btn-outline-info">✅ Pokaż wg zaznaczenia</button>
+
+        <a href="#top" class="btn btn fancy-button">
+            ⬆️ Do góry
+        </a>
+
+    </div>
+
+</form> 
+@*
+<div class="d-flex justify-content-between align-items-center mt-3 gap-2"> <!--Wszystkie 3 przyciski na jednakowym poziomie-->
+
+    <a asp-controller="Collections" asp-action="Create" class="btn btn fancy-button">
+        ➕ Dodaj kolekcję
+    </a>
+
+
+    <button onclick="window.print()" class="btn btn-success">
+        🖨️ Drukuj
+    </button>
+
+    <button type="submit" class="btn btn-outline-info">✅ Pokaż wg zaznaczenia</button>
+
+    <a href="#top" class="btn btn fancy-button">
+        ⬆️ Do góry
+    </a>
+
+</div>
+*@
+<!-- Kotwica na końcu tabeli – dla innych funkcji np. przewijania z głównej -->
+<a id="koniec-tabeli"></a>
+
